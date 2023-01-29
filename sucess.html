@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+<body>
+
+  <!-- Rating state start -->
+
+  <div class="card">
+    <div class="container">
+
+      <img src="./images/illustration-thank-you.svg" alt="check">
+
+
+
+    <div class="heading">
+
+      <p id="display-rating"></p>
+     <h1>Thank you!</h1>
+    </div>
+    <div class="subtext">
+     We appreciate you taking the time to give a rating. If ever you ever need more support, dont hesitate to get in touch!
+    </div>
+
+   
+  
+ 
+</div>
+<script>
+// Get the rating from the query string
+const params = new URLSearchParams(window.location.search);
+const rating = params.get('rating');
+// Display the rating on the page
+document.getElementById('display-rating').textContent = "You selected " + rating + " out of 5";
+
+</script>
+
+</body>
+</html>
